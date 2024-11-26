@@ -169,6 +169,61 @@
         "slug": "raros-peinados-nuevos",
         "author": "Charly García",
         "date": "2024-11-26",
-        "measures": []
+        "measures": [
+            {
+                "timeSignature": "4/4",
+                "hasTimeSignature": true,
+                "notes": [
+                    {
+                        "keys": [
+                            "C/4"
+                        ],
+                        "duration": "8"
+                    },
+                    {
+                        "keys": [
+                            "C/4"
+                        ],
+                        "duration": "8r"
+                    },
+                    {
+                        "keys": [
+                            "C/4"
+                        ],
+                        "duration": "8r"
+                    },
+                    {
+                        "keys": [
+                            "C/4"
+                        ],
+                        "duration": "8"
+                    },
+                    {
+                        "keys": [
+                            "C/4"
+                        ],
+                        "duration": "8"
+                    },
+                    {
+                        "keys": [
+                            "C/4"
+                        ],
+                        "duration": "8r"
+                    },
+                    {
+                        "keys": [
+                            "C/4"
+                        ],
+                        "duration": "8r"
+                    },
+                    {
+                        "keys": [
+                            "C/4"
+                        ],
+                        "duration": "8r"
+                    }
+                ]
+            }
+        ]
     }
 ]
