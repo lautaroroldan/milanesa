@@ -1,32 +1,7 @@
 import Link from 'next/link';
 import React from 'react'
-
-interface Post {
-    id: number;
-    title: string;
-    slug: string;
-    author: string;
-    date: string;
-}
-
-export const posts: Post[] = [
-    {
-        id: 1,
-        title: "I will survive",
-        slug: "i-will-survive",
-        author: "Gloria Gaynor",
-        date: "2024-01-01",
-    },
-    {
-        id: 2,
-        title: "I like it",
-        slug: "i-like-it",
-        author: "DeBarge",
-        date: "2024-01-02",
-    }
-]
-
-const PostItem = ({ post }: { post: Post }) => {
+import data from '../db/data.json'
+const PostItem = ({ post }: { post: typeof data[0] }) => {
     const year = post.date.split('-')[0];
     const month = post.date.split('-')[1];
     return (
@@ -46,7 +21,7 @@ function Posts() {
 
     return (
         <ul>
-            {posts.map((post) => (
+            {data.map((post) => (
                 <PostItem key={post.id} post={post} />
             ))}
         </ul>
