@@ -1,18 +1,11 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 import "./globals.css";
 import Header from "@/app/components/header";
+import { Inter } from "next/font/google";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+const inter = Inter({
+  subsets: ['latin'],
+})
 
 export const metadata: Metadata = {
   title: "Milanesa",
@@ -27,10 +20,12 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-primary h-screen max-w-3xl mx-auto`}
+        className={`${inter.className} antialiased bg-primary h-screen flex flex-col`}
       >
-        <Header className="mt-16" />
-        <main className="">{children}</main>
+        <div className="max-w-3xl mx-auto w-full md:px-0 px-6">
+          <Header className="mt-16" />
+          <main>{children}</main>
+        </div>
       </body>
     </html>
   );
