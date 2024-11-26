@@ -3,7 +3,7 @@ import Title from '@/app/components/title'
 import React from 'react'
 
 async function PostPage({ params }: { params: { slug: string } }) {
-    const baseUrl = 'http://localhost:3000'
+    const baseUrl = process.env.NODE_ENV === 'development' ? 'http://localhost:3000' : 'https://milanesa.vercel.app'
     const url = new URL(`/api?slug=${params.slug}`, baseUrl)
     const post = await fetch(url).then(res => res.json())
 
