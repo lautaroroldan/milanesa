@@ -48,7 +48,7 @@ export function SongCard({ song, className, index }: SongCardProps) {
                 animationDelay: `${index * 100}ms`,
             }}
         >
-            <Link href={`/posts/${song.slug}`}>
+            <Link href={`/songs/${song.slug}`}>
                 <div
                     className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
                     style={{ backgroundImage: `url(${song.albumArt})` }}
