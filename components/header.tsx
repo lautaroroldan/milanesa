@@ -13,7 +13,6 @@ function Header({ className }: { className?: string }) {
 
     const pathname = usePathname();
     const pageName = pathname.split('/').pop();
-
     return (
         <header className={cn("", className)}>
             <Breadcrumb>
@@ -24,14 +23,14 @@ function Header({ className }: { className?: string }) {
                     <BreadcrumbSeparator>
                         <p className='font-bold'>:</p>
                     </BreadcrumbSeparator>
-                    <BreadcrumbItem>
+                    <BreadcrumbItem className={cn("text-foreground", pageName === "milanesa" || pageName === "" && "text-primary")}>
                         <CustomBreadcrumbLink href="/">Milanesa</CustomBreadcrumbLink>
                     </BreadcrumbItem>
                     <BreadcrumbSeparator >
                         <p className='font-bold'>/</p>
                     </BreadcrumbSeparator>
                     <BreadcrumbItem>
-                        <BreadcrumbPage className='capitalize text-secondary/35 font-medium'>{pageName}</BreadcrumbPage>
+                        <BreadcrumbPage className='capitalize text-primary font-medium'>{pageName}</BreadcrumbPage>
                     </BreadcrumbItem>
                 </BreadcrumbList>
             </Breadcrumb>

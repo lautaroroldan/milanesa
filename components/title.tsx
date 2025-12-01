@@ -14,7 +14,7 @@ const poppins = Poppins({
 
 function Title({ title, className }: TitleProps) {
     return (
-        <h1 className={cn(`text-4xl font-bold text-white ${poppins.className} capitalize`, className)}>{title}</h1>
+        <h1 className={cn(`text-4xl md:text-5xl font-bold text-foreground ${poppins.className} capitalize`, className)}>{title}</h1>
     )
 }
 

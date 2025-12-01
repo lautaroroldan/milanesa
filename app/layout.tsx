@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Header from "@/app/components/header";
+import Header from "@/components/header";
 import { Inter } from "next/font/google";
 
 const inter = Inter({
@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body
-        className={`${inter.className} antialiased bg-primary h-screen flex flex-col`}
+        className={`${inter.className} antialiased bg-background h-screen flex flex-col selection:bg-primary selection:text-primary-foreground`}
       >
         <div className="max-w-3xl mx-auto w-full md:px-0 px-6">
           <Header className="mt-16" />

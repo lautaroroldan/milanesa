@@ -5,10 +5,12 @@
         "slug": "i-will-survive",
         "author": "Gloria Gaynor",
         "date": "2024-11-26",
+        "size": "small",
+        "albumArt": "https://i.scdn.co/image/ab67616d0000b2738fe438c0dce2d985ba65197c",
+        "videoId": "6dYWe1c3OyU",
+        "timeSignature": "4/4",
         "measures": [
             {
-                "hasTimeSignature": true,
-                "timeSignature": "4/4",
                 "notes": [
                     {
                         "keys": [
@@ -44,9 +46,12 @@
         "slug": "i-like-it",
         "author": "DeBarge",
         "date": "2024-11-26",
+        "size": "large",
+        "albumArt": "https://i.scdn.co/image/ab67616d0000b2733e0fdb66fe1b2f43496eb3a7",
+        "videoId": "4Sn6Upf43TA",
+        "timeSignature": "4/4",
         "measures": [
             {
-                "timeSignature": "4/4",
                 "notes": [
                     {
                         "keys": [
@@ -102,7 +107,6 @@
                 ]
             },
             {
-                "timeSignature": "4/4",
                 "notes": [
                     {
                         "keys": [
@@ -168,9 +172,12 @@
         "slug": "raros-peinados-nuevos",
         "author": "Charly García",
         "date": "2024-11-26",
+        "size": "medium",
+        "albumArt": "https://i.scdn.co/image/ab67616d0000b273a89f53c13537b933a43d2600",
+        "videoId": "kw4cbx3tVGY",
+        "timeSignature": "4/4",
         "measures": [
             {
-                "timeSignature": "4/4",
                 "notes": [
                     {
                         "keys": [
@@ -223,5 +230,17 @@
                 ]
             }
         ]
+    },
+    {
+        "id": 4,
+        "title": "Próximamente",
+        "slug": "proximamente-1",
+        "author": "TBA",
+        "date": "2024-12-01",
+        "size": "small",
+        "albumArt": "https://static.vecteezy.com/system/resources/thumbnails/008/695/917/small/no-image-available-icon-simple-two-colors-template-for-no-image-or-picture-coming-soon-and-placeholder-illustration-isolated-on-white-background-vector.jpg",
+        "videoId": "",
+        "timeSignature": "4/4",
+        "measures": []
     }
 ]
