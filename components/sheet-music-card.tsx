@@ -19,23 +19,14 @@ export function SheetMusicCard({ measures, timeSignature }: SheetMusicCardProps)
                         <FileMusic className="h-5 w-5 text-primary" />
                     </div>
                     <span>Partitura</span>
-                    <div className="ml-auto h-8 w-1 bg-gradient-to-b from-primary via-primary/60 to-primary/20 rounded-full" />
+                    <div className="ml-auto h-8 w-1 bg-linear-to-b from-primary via-primary/60 to-primary/20 rounded-full" />
                 </CardTitle>
             </CardHeader>
             <CardContent className="px-5 md:px-8 pb-6 md:pb-8">
-                <div className="relative">
-                    <div className="absolute left-0 top-0 bottom-0 w-4 bg-gradient-to-r from-card to-transparent z-10 pointer-events-none md:hidden" />
-                    <div className="absolute right-0 top-0 bottom-0 w-4 bg-gradient-to-l from-card to-transparent z-10 pointer-events-none md:hidden" />
-                    
-                    <div className="overflow-x-auto -mx-2 px-2 scrollbar-thin scrollbar-thumb-primary/20 scrollbar-track-transparent">
-                        <div className="min-w-[600px] md:min-w-0">
-                            <VexFlowRenderer measures={measures} timeSignature={timeSignature} />
-                        </div>
-                    </div>
-                </div>
-                <p className="text-xs text-muted-foreground/60 mt-3 text-center md:hidden">
-                    Deslizá para ver más
-                </p>
+                <VexFlowRenderer
+                    measures={measures}
+                    timeSignature={timeSignature}
+                />
             </CardContent>
         </Card>
     )
