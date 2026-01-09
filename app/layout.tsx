@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body
-        className={`${inter.className} antialiased bg-background h-screen flex flex-col selection:bg-primary selection:text-primary-foreground`}
+        className={`${inter.className} antialiased bg-background min-h-screen flex flex-col selection:bg-primary selection:text-primary-foreground`}
       >
         <div className="max-w-3xl mx-auto w-full md:px-0 px-6">
           <Header className="mt-16" />

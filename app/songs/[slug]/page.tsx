@@ -1,9 +1,7 @@
-
+import { SheetMusicCard } from '@/components/sheet-music-card'
 import Title from '@/components/title'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { YouTubeEmbed } from '@next/third-parties/google';
-import { VexFlowRenderer } from 'accidentaljs';
-import { Calendar, Music } from 'lucide-react';
+import { VideoCard } from '@/components/video-card'
+import { Calendar, Music } from 'lucide-react'
 
 async function SongDetails(props: { params: Promise<{ slug: string }> }) {
     const params = await props.params;
@@ -11,43 +9,47 @@ async function SongDetails(props: { params: Promise<{ slug: string }> }) {
     const url = new URL(`/api?slug=${params.slug}`, baseUrl)
     const song = await fetch(url).then(res => res.json())
 
-    if (!song) return <div>Song not found</div>;
+    if (!song) {
+        return (
+            <div className="my-20 md:my-28 text-center">
+                <p className="text-muted-foreground text-lg">Canción no encontrada</p>
+            </div>
+        );
+    }
+
     return (
-        <div className="space-y-3 mt-12">
-            <div className="space-y-2">
-                <Title title={song.title} />
-                <div className="flex items-center gap-2 text-muted-foreground">
-                    <Music className="h-5 w-5" />
-                    <p className="text-xl">{song.author}</p>
+        <article className="pb-16 md:pb-24">
+            <header className="my-16 md:my-24 space-y-6">
+                <div className="pl-2">
+                    <Title title={song.title} />
                 </div>
+                
+                <div className="space-y-3 pl-2">
+                    <div className="flex items-center gap-2.5 text-muted-foreground">
+                        <Music className="h-5 w-5 text-primary/70" />
+                        <p className="text-lg md:text-xl font-medium">{song.author}</p>
+                    </div>
+                    
+                    <div className="flex items-center gap-2.5 text-sm text-muted-foreground/80">
+                        <Calendar className="h-4 w-4" />
+                        <span>Aprendida el {song.date}</span>
+                    </div>
+                </div>
+
+                <div className="flex items-center gap-3 pt-2 pl-2">
+                    <div className="h-px w-16 bg-linear-to-r from-primary/50 to-transparent" />
+                    <div className="w-1.5 h-1.5 rounded-full bg-primary/40" />
+                </div>
+            </header>
+
+            <div className="space-y-8 md:space-y-10">
+                <SheetMusicCard 
+                    measures={song.measures} 
+                    timeSignature={song.timeSignature} 
+                />
+                <VideoCard videoId={song.videoId} />
             </div>
-            <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                <Calendar className="h-4 w-4" />
-                <span>Aprendida el {song.date}</span>
-            </div>
-            <Card>
-                <CardHeader className='py-0 px-6 pt-6'>
-                    <CardTitle className='text-xl flex items-center gap-2'>
-                        <div className="h-8 w-1 bg-primary rounded-full" />
-                        Partitura
-                    </CardTitle>
-                </CardHeader>
-                <CardContent>
-                    <VexFlowRenderer measures={song.measures} timeSignature={song.timeSignature} />
-                </CardContent>
-            </Card>
-            <Card>
-                <CardHeader>
-                    <CardTitle className='text-xl flex items-center gap-2'>
-                        <div className="h-8 w-1 bg-primary rounded-full" />
-                        Video
-                    </CardTitle>
-                </CardHeader>
-                <CardContent>
-                    <YouTubeEmbed videoid={song.videoId} height={400} />
-                </CardContent>
-            </Card>
-        </div>
+        </article>
     )
 }
 
