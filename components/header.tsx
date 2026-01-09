@@ -6,7 +6,7 @@ import React from 'react'
 
 
 const CustomBreadcrumbLink = ({ href, children }: { href: string, children: React.ReactNode }) => {
-    return <BreadcrumbLink href={href} className='hover:text-secondary/35 font-medium'>{children}</BreadcrumbLink>
+    return <BreadcrumbLink href={href} className='hover:text-primary/80 font-medium'>{children}</BreadcrumbLink>
 }
 
 function Header({ className }: { className?: string }) {
