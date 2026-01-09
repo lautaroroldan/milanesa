@@ -2,7 +2,6 @@
 
 import Title from "@/components/title";
 import SongsList from "@/components/song-list";
-import { Footer } from "@/components/footer";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
@@ -51,7 +50,6 @@ export default function Home() {
         <SongsList />
       </motion.section>
 
-      <Footer />
     </div>
   );
 }
