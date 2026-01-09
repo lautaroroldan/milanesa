@@ -18,7 +18,7 @@ async function SongDetails(props: { params: Promise<{ slug: string }> }) {
     }
 
     return (
-        <article className="pb-16 md:pb-24">
+        <article>
             <header className="my-16 md:my-24 space-y-6">
                 <div className="pl-2">
                     <Title title={song.title} />

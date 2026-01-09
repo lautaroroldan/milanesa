@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 
 export default function Home() {
   return (
-    <div className="h-full w-full pb-16">
+    <div className="h-full w-full">
       <motion.div 
         className="my-20 md:my-28 space-y-4"
         initial={{ opacity: 0 }}

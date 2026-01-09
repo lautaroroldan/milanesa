@@ -30,7 +30,7 @@ const links: FooterLink[] = [
 export function Footer() {
   return (
     <motion.footer 
-      className="mt-24 pb-8"
+      className="mt-16 pb-8"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5, delay: 0.6 }}

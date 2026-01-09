@@ -6,7 +6,7 @@ import { motion } from 'framer-motion'
 
 function About() {
     return (
-        <article className="pb-16 md:pb-24">
+        <article>
             <motion.header 
                 className="my-16 md:my-24 space-y-6"
                 initial={{ opacity: 0 }}
