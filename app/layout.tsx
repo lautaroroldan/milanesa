@@ -34,15 +34,15 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/og-image.png",
-        width: 1200,
-        height: 630,
+        width: 1024,
+        height: 1024,
         alt: "Milanesa - Música y Partituras",
         type: "image/png",
       },
     ],
   },
   twitter: {
-    card: "summary_large_image",
+    card: "summary",
     title: "Milanesa - Música y Partituras",
     description: "Un sitio web dedicado a compartir música y partituras. Descubre canciones, aprende teoría musical y explora nuestro catálogo de partituras interactivas.",
     images: ["/og-image.png"],
@@ -61,14 +61,13 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       { url: "/favicon.ico" },
-      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
-      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      // { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      // { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
     ],
-    apple: [
-      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
-    ],
+    // apple: [
+    //   { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    // ],
   },
-  manifest: "/site.webmanifest",
 };
 
 export default function RootLayout({
