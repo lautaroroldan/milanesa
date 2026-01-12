@@ -33,11 +33,11 @@ export const metadata: Metadata = {
     description: "Un sitio web dedicado a compartir música y partituras. Descubre canciones, aprende teoría musical y explora nuestro catálogo de partituras interactivas.",
     images: [
       {
-        url: "/og-image.png",
+        url: "/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Milanesa - Música y Partituras",
-        type: "image/png",
+        type: "image/jpg",
       },
     ],
   },
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     card: "summary",
     title: "Milanesa - Música y Partituras",
     description: "Un sitio web dedicado a compartir música y partituras. Descubre canciones, aprende teoría musical y explora nuestro catálogo de partituras interactivas.",
-    images: ["/og-image.png"],
+    images: ["/og-image.jpg"],
   },
   robots: {
     index: true,
