@@ -9,7 +9,7 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://milanesa.app'),
+  metadataBase: new URL('https://www.milanesa.app'),
   title: {
     default: "Milanesa - Música y Partituras",
     template: "%s | Milanesa"
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "es_ES",
-    url: "/",
+    url: "https://www.milanesa.app",
     siteName: "Milanesa",
     title: "Milanesa - Música y Partituras",
     description: "Un sitio web dedicado a compartir música y partituras. Descubre canciones, aprende teoría musical y explora nuestro catálogo de partituras interactivas.",
@@ -40,6 +40,9 @@ export const metadata: Metadata = {
         type: "image/jpg",
       },
     ],
+  },
+  alternates: {
+    canonical: "https://www.milanesa.app",
   },
   twitter: {
     card: "summary",

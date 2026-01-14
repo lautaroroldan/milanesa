@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next'
 import data from './db/data.json'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://milanesa.app'
+  const baseUrl = 'https://www.milanesa.app'
 
   // Páginas estáticas
   const staticPages: MetadataRoute.Sitemap = [
