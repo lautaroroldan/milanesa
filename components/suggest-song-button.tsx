@@ -81,7 +81,7 @@ export default function SuggestSongButton() {
             <div>
               <DialogTitle>Sugerir una canción</DialogTitle>
               <DialogDescription>
-                Contame qué tema te gustaría escuchar en la web.
+                Contame qué tema te gustaría que aparezca en Milanesa.
               </DialogDescription>
             </div>
           </div>
