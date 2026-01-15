@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/header";
+import SuggestSongButton from "@/components/suggest-song-button";
 import { Inter } from "next/font/google";
 import { Footer } from "@/components/footer";
 
@@ -88,6 +89,7 @@ export default function RootLayout({
           <main>{children}</main>
           <Footer />
         </div>
+        <SuggestSongButton />
       </body>
     </html>
   );

@@ -3,8 +3,6 @@ import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbP
 import { cn } from '@/lib/utils';
 import { usePathname } from 'next/navigation';
 import React from 'react'
-
-
 const CustomBreadcrumbLink = ({ href, children }: { href: string, children: React.ReactNode }) => {
     return <BreadcrumbLink href={href} className='hover:text-primary/80 font-medium'>{children}</BreadcrumbLink>
 }
@@ -14,7 +12,7 @@ function Header({ className }: { className?: string }) {
     const pathname = usePathname();
     const pageName = pathname.split('/').pop();
     return (
-        <header className={cn("", className)}>
+        <header className={cn("flex items-center justify-between", className)}>
             <Breadcrumb>
                 <BreadcrumbList>
                     <BreadcrumbItem>
